@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Image(
                 image:
-                    AssetImage('../assets/images/Google-flutter-logo.svg.png'),
+                    AssetImage('assets/images/Google-flutter-logo.svg.png'),
                 width: 200,
                 height: 200,
               )
