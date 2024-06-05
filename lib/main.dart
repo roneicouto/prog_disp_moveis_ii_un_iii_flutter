@@ -66,64 +66,81 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         titleTextStyle: const TextStyle(color: Colors.white),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image(
-                  image: AssetImage(
-                      '../assets/images/Google-flutter-logo.svg.png'),
-                  width: 200,
-                  height: 200,
-                )
-              ],
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Um breve contador de cliques',
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            espacamento(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: _decrementCounter,
-                  child: const Text('-1'),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                ElevatedButton(
-                  onPressed: _incrementCounter,
-                  child: const Text('+1'),
-                ),
-              ],
-            ),
-            espacamento(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: _reset,
-                  child: const Text('Reiniciar Contagem'),
-                ),
-              ],
-            )
-          ],
-        ),
+      body: Column(
+        children: <Widget>[
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image(
+                image:
+                    AssetImage('../assets/images/Google-flutter-logo.svg.png'),
+                width: 200,
+                height: 200,
+              )
+            ],
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Ronei Couto Melo',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Idade: 36 anos , Profissão: Desenvolvedor',
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+          espacamento(),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Um breve contador de cliques',
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+          Text(
+            '$_counter',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          espacamento(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: _decrementCounter,
+                child: const Text('-1'),
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              ElevatedButton(
+                onPressed: _incrementCounter,
+                child: const Text('+1'),
+              ),
+            ],
+          ),
+          espacamento(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: _reset,
+                child: const Text('Reiniciar Contagem'),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }
